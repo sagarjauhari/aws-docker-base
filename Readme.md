@@ -1,5 +1,5 @@
 # AWS Docker Base
-Base image for working with AWS ECR and/or AWS EKS Kubernetes clusters. Comes with the following tools pre-installed:
+Image for working with AWS ECR and/or AWS EKS Kubernetes clusters. Comes with the following tools pre-installed:
 
 - [awscli](https://github.com/aws/aws-cli)
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/)
