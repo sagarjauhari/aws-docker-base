@@ -1,5 +1,5 @@
 # ECR EKS Base
-Base image for working with ECR and/or EKS Kubernetes clusters. Comes with the following tools pre-installed:
+Base image for working with AWS ECR and/or AWS EKS Kubernetes clusters. Comes with the following tools pre-installed:
 
 - [awscli](https://github.com/aws/aws-cli)
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/)
