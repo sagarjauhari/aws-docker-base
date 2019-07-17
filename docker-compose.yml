@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  app:
+    build: .
+    command: sh
+    environment:
+      AWS_ACCESS_KEY_ID: ${CIRCLECI_AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${CIRCLECI_AWS_SECRET_ACCESS_KEY}
