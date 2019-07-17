@@ -9,5 +9,5 @@ Base image for working with AWS ECR and/or AWS EKS Kubernetes clusters. Comes wi
 REF: https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
 
 ```sh
-aws eks --region us-west-2 update-kubeconfig --name $CLUSTER_NAME
+aws eks --region $AWS_REGION update-kubeconfig --name $CLUSTER_NAME
 ```
