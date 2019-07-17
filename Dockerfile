@@ -1,22 +1,19 @@
 FROM alpine:3.10
 
-ENV PYTHON_VERSION=3.7.3-r0
-ENV PIP_VERSION=19.1.1
-ENV AWSCLI_VERSION=1.16.199
-ENV KUBECTL_VERSION=v1.15.0
+ENV PYTHON_VERSION=3.7.3-r0 \
+    PIP_VERSION=19.1.1 \
+    AWSCLI_VERSION=1.16.199 \
+		KUBECTL_VERSION=v1.15.0
 
 # Install python3
 RUN apk add --no-cache python3=$PYTHON_VERSION curl && \
     if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi
 
-# Install pip3
+# Install pip, awscli
 RUN python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --no-cache pip==$PIP_VERSION && \
+    pip3 install --no-cache pip==$PIP_VERSION awscli==$AWSCLI_VERSION && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
-
-# Install awscli
-RUN pip3 install awscli==$AWSCLI_VERSION
 
 # Install kubectl
 RUN curl -s -o /usr/local/bin/kubectl \

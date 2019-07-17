@@ -2,7 +2,7 @@
 Base image for working with ECR and/or EKS Kubernetes clusters. Comes with the following tools pre-installed:
 
 - [awscli](https://github.com/aws/aws-cli)
-- [kubectl]()
+- [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/)
 - [aws-iam-authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator)
 
 ## Create kubeconfig
