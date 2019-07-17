@@ -27,3 +27,7 @@ RUN curl -s -o /usr/local/bin/aws-iam-authenticator \
 
 # Cleanup
 RUN apk -v --purge del curl
+
+ENTRYPOINT ["/bin/sh","-c"]
+CMD [""]
+WORKDIR /tmp
